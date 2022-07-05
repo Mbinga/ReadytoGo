@@ -1,19 +1,20 @@
 const Button = ({ switcher, setSwitch }) => {
-    return { switcher } === true ? (
+    console.log(switcher);
+    return switcher === true ? (
         <button
             onClick={() => {
-                setSwitch(true);
+                setSwitch((switcher = false));
             }}
         >
-            ON
+            OFF
         </button>
     ) : (
         <button
             onClick={() => {
-                setSwitch(false);
+                setSwitch((switcher = true));
             }}
         >
-            OFF
+            ON
         </button>
     );
 };
